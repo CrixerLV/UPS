@@ -13,8 +13,9 @@ INSTALLATION
 ## 1. Download project
 ## 2. Launch your database app (XAMPP, ETC...)
 ## 3. Launch cmd in project folder
-## 4. Run command "php yii migrate" and agree to migrate succesfully
-## 5. Run command "php yii serve"
-## 6. Head to localhost and take a look at the project
+## 4. Run command "composer install"
+## 5. Run command "php yii migrate" and agree to migrate succesfully
+## 6. Run command "php yii serve"
+## 7. Head to localhost and take a look at the project
 
 

@@ -17,13 +17,13 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'termins')->input('date') ?>
 
     <?= $form->field($model, 'statuss')->dropDownList([
-        '1' => 'Pabeigts',
-        '0' => 'Nepabeigts',
-    ], ['prompt' => 'Izvēlies statusu']) ?>
+        '1' => 'Finished',
+        '0' => 'Unfinished',
+    ], ['prompt' => 'Choose a status']) ?>
 
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Izveidot'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Create'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

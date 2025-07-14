@@ -48,7 +48,7 @@ class LoginForm extends Model
             $user = $this->getUser();
 
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Nederīgs lietotājvārds un vai parole.');
+                $this->addError($attribute, 'Wrong username or password.');
             }
         }
     }

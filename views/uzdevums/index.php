@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\UzdevumsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = Yii::t('app', 'Uzdevums');
+$this->title = Yii::t('app', 'Tasks');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="uzdevums-index">
@@ -18,8 +18,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p class="flex">
-        <?= Html::a(Yii::t('app', 'Izveidot Uzdevumu'), ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a(Yii::t('app', 'Apskatīt API endpoint'), ['api'], ['class' => 'btn btn-warning']) ?>
+        <?= Html::a(Yii::t('app', 'Create Task'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'API Endpoint'), ['api'], ['class' => 'btn btn-warning']) ?>
     </p>
 
 
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'statuss',
                 'value' => function($model) {
-                    return $model->statuss ? 'Pabeigts' : 'Nepabeigts';
+                    return $model->statuss ? 'Finished' : 'Unfinished';
                 },
                 'contentOptions' => function($model) {
                     return [

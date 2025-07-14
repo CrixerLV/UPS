@@ -8,13 +8,13 @@
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
-$this->title = 'Autorizēties';
+$this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Aizpildi autorzācijas formas laukus, lai autorizētos!</p>
+    <p>Fill all input fields to login!</p>
 
     <div class="row">
         <div class="col-lg-5">
@@ -29,17 +29,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ]); ?>
 
-            <?= $form->field($model, 'username')->textInput()->label('Lietotājvārds') ?>
+            <?= $form->field($model, 'username')->textInput()->label('Username') ?>
 
-            <?= $form->field($model, 'password')->passwordInput()->label('Parole') ?>
+            <?= $form->field($model, 'password')->passwordInput()->label('Password') ?>
 
             <?= $form->field($model, 'rememberMe')->checkbox([
                 'template' => "<div class=\"custom-control custom-checkbox\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            ])->label('Atcerēties mani') ?>
+            ])->label('Remember me') ?>
 
             <div class="form-group">
                 <div>
-                    <?= Html::submitButton('Autorizēties', ['class' => 'btn btn-outline-dark', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton('Login', ['class' => 'btn btn-outline-dark', 'name' => 'login-button']) ?>
                 </div>
             </div>
 

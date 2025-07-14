@@ -26,10 +26,12 @@ class SignUpForm extends Model
     public function rules()
     {
         return [
-            [['username', 'password', 'verifypassword'], 'required', 'message' => 'Lauks "{attribute}" nevar būt tukšs.'],
+            [['username', 'password', 'verifypassword'], 'required', 'message' => 'Field "{attribute}" Cannot be blank!'],
             ['username', 'unique', 'targetClass' => '\app\models\User'],
             ['password', 'string', 'min' => 6],
-            ['verifypassword', 'compare', 'compareAttribute' => 'password', 'message' => "Paroles nesakrīt!"],
+            ['verifypassword', 'compare', 'compareAttribute' => 'password', 'message' => "Passwords don't match!"],
+            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['verifypassword', 'string', 'min' => 6],
         ];
     }
     public function signup()
@@ -48,9 +50,9 @@ class SignUpForm extends Model
         public function attributeLabels()
     {
         return [
-            'username' => Yii::t('app', 'Lietotājvārds'),
-            'password' => Yii::t('app', 'Parole'),
-            'verifypassword' => Yii::t('app', 'Parole atkārtoti'),
+            'username' => Yii::t('app', 'Username'),
+            'password' => Yii::t('app', 'Password'),
+            'verifypassword' => Yii::t('app', 'Password verification'),
         ];
     }
 }

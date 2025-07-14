@@ -39,14 +39,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Uzdevumi', 'url' => ['/uzdevums/index'] , 'visible' => !Yii::$app->user->isGuest],
-            ['label' => 'Reģistrēties', 'url' => ['/site/signup'], 'visible' => Yii::$app->user->isGuest],
+            ['label' => 'Tasks', 'url' => ['/uzdevums/index'] , 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Register', 'url' => ['/site/signup'], 'visible' => Yii::$app->user->isGuest],
             Yii::$app->user->isGuest
-                ? ['label' => 'Autorizēties', 'url' => ['/site/login']]
+                ? ['label' => 'Login', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
                     . Html::beginForm(['/site/logout'])
                     . Html::submitButton(
-                        'Iziet (' . Yii::$app->user->identity->username . ')',
+                        'Logout (' . Yii::$app->user->identity->username . ')',
                         ['class' => 'nav-link btn btn-link logout']
                     )
                     . Html::endForm()

@@ -46,10 +46,10 @@ class Uzdevums extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'nosaukums' => Yii::t('app', 'Nosaukums'),
-            'termins' => Yii::t('app', 'Termins'),
-            'statuss' => Yii::t('app', 'Statuss'),
-            'user_id' => Yii::t('app', 'Lietotāja ID'),
+            'nosaukums' => Yii::t('app', 'Name'),
+            'termins' => Yii::t('app', 'Valid till'),
+            'statuss' => Yii::t('app', 'Status'),
+            'user_id' => Yii::t('app', 'User ID'),
         ];
     }
 

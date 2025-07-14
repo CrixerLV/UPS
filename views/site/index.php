@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'UPS - uzdevumu pārvaldības sistēma';
+$this->title = 'UPS - Task Management System';
 ?>
 
 <div class="site-index">
@@ -22,15 +22,15 @@ $this->title = 'UPS - uzdevumu pārvaldības sistēma';
     </div>
 
     <div class="hero-content text-center text-black mt-5">
-        <h1 class="display-1">Sveicināts UPS!</h1>
-        <p class="fs-5">Uzdevumu pārvaldības sistēma</p>
+        <h1 class="display-1">Welcome to UPS!</h1>
+        <p class="fs-5">Task management system</p>
         <?php if (Yii::$app->user->isGuest): ?>
             <div>
-                <?= \yii\helpers\Html::a('Autorizēties', ['/site/login'], ['class' => 'btn btn-dark']) ?>
-                <?= \yii\helpers\Html::a('Reģistrēties', ['/site/signup'], ['class' => 'btn btn-outline-dark']) ?>
+                <?= \yii\helpers\Html::a('Login', ['/site/login'], ['class' => 'btn btn-dark']) ?>
+                <?= \yii\helpers\Html::a('Register', ['/site/signup'], ['class' => 'btn btn-outline-dark']) ?>
             </div>
             <?php else: ?>
-                <?= \yii\helpers\Html::a('Apskatīt uzdevumus', ['/uzdevums'], ['class' => 'btn btn-outline-dark']) ?>
+                <?= \yii\helpers\Html::a('View Tasks', ['/uzdevums'], ['class' => 'btn btn-outline-dark']) ?>
         <?php endif; ?>
     </div>
 
